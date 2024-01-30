@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration or Sign Up form in HTML CSS | CodingLab </title>
+    <link rel="stylesheet" href="{% static 'style.css'  %}">
+</head>
+<body style="background-color: rgba(80, 14, 151, 0.788);">
+<div class="wrapper">
+
+    <h2>Registration</h2>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <div class="input-box">
+            <input name="firs_name" type="text" firs_name=models.CharField() placeholder="Create firs_name" required>
+        </div>
+        <div class="input-box">
+            <input name="last_name" type="text" last_name=models.CharField() placeholder="Enter your last name"
+                   required>
+        </div>
+        <div class="input-box">
+            <input name="age" type="number" age=models.IntegerField() placeholder="Create age" required>
+        </div>
+        <div class="input-box">
+            <input style="height: 80px;" name="bio" type="text" bio=models.TextField() placeholder="Enter your bio"
+                   required>
+        </div>
+        <div class="policy">
+            <!-- <input type="checkbox"> -->
+            <!-- <h3>I accept all terms & condition</h3> -->
+        </div>
+        <div class="input-box button">
+            <input style=color:crimson type="Submit" value="Register Now">
+        </div>
+        <div class="text">
+            <h3>Already have an account? <a href="#">Login now</a></h3>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
